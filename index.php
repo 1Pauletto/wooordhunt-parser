@@ -5,7 +5,6 @@ require __DIR__ . '/vendor/autoload.php';
 use DiDom\Document;
 
 $word = isset($_GET['word']) ? trim($_GET['word']) : 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
-$result = [];
 $document = new Document("http://wooordhunt.ru/word/{$word}", true);
 
 if ($document->find('#word_not_found')) {
